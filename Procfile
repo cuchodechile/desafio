@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -b 0.0.0.0:$PORT -k gevent main:app
+web: python manage.py runserver 0.0.0.0:8090
