@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block titulo %}Indicadores Economicos{% endblock %}
+{% block encabezado %}
+	<h1>Indicadores Economicos</h1>
+{% endblock %}
+{% block contenido %}
+<div>
+    <p> Elige el Indicador y rango de Fecha que deseas ver</p>
+    <form id='formulario' action="" method="POST"> {% csrf_token %}
+    Indicador: {{ formulario.Indicador }}
+    Fecha de Inicio:{{ formulario.inicio }}&nbsp;&nbsp; Fin :{{ formulario.final }}<br/>
+    <input  type = "submit" name = "submit" value = "Obtener">
+    </form>
+
+</div>
+
+{% endblock %}

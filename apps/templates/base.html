@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Recetario para MDW - {% block titulo %}{% endblock %}</title>
+  <link rel='stylesheet' href='{% static "css/base.css" %}'>
+  <link rel='shortcut icon' href='{% static "img/icono.png" %}'>
+  {% block style_css %}{% endblock %}
+  <script src='{% static "js/jquery-3.1.1.min.js" %}'></script>
+  <script src='{% static "js/demo.js" %}'></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+	<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+	<style>
+	canvas{
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+</head>
+<body>
+  <header>
+	{% block encabezado %}{% endblock %}
+	<nav>
+	</nav>
+	<hr>
+  </header>
+  <section class='contenido'>
+	{% block contenido %}{% endblock %}
+  </section>
+  <footer>
+	<p>@cuchodechile Ricardo Irarrazabal</p>
+  </footer>
+  
+</body>
+</html>
